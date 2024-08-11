@@ -26,12 +26,12 @@ func Test_normalize(t *testing.T) {
 }
 
 type allowed struct {
-	wrd1  string
+	wrd   string
 	valid bool
 }
 
 var suite2 = []allowed{
-	{"thisismixedspace", false},
+	{"thisismixedspace", true},
 	//Words cannot be empty
 	{"", false},
 	//Words must be alphabetical
@@ -40,12 +40,12 @@ var suite2 = []allowed{
 	{"Mr. Owl ate my metal worm", true},
 }
 
-// func Test_eligibleWordPairs(t *testing.T) {
+func Test_eligibleWordPairs(t *testing.T) {
 
-// 	for _, entry := range suite2 {
-// 		if response := validate(entry.wrd1, entry.wrd2); response != entry.valid {
-// 			t.Errorf("Expected %v for validating %s and %s. Got %v", entry.valid, entry.wrd1, entry.wrd2, response)
-// 		}
-// 	}
+	for _, entry := range suite2 {
+		if response := validate(entry.wrd); response != entry.valid {
+			t.Errorf("Expected %v for validating %s. Got %v", entry.valid, entry.wrd, response)
+		}
+	}
 
-// }
+}
