@@ -60,9 +60,6 @@ func normalize(word string) string {
 	reg, _ := regexp.Compile(`[^a-zA-Z0-9 ]+`)
 	normalized := reg.ReplaceAllString(word, "")
 
-	//Purse all spaces
-	normalized = strings.ReplaceAll(normalized, " ", "")
-
 	//make everything lowercase
 	return strings.ToLower(normalized)
 }
