@@ -7,7 +7,10 @@ type data struct {
 }
 
 var suite = []data{
-	data{"this has spaces", "thishasspaces"},
+	//Normalizing should prune spaces
+	{"this has spaces", "thishasspaces"},
+	//Normalzing should convert word to lower case
+	{"ThisISMIXEDSPACE", "thishasspaces"},
 }
 
 func Test_normalize(t *testing.T) {

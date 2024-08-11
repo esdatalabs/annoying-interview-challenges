@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func solultion1(w1 string, w2 string) bool {
 
@@ -19,7 +22,10 @@ func validate(w1 string, w2 string) {
 }
 
 func normalize(word string) string {
-	return ""
+
+	normalized := strings.ReplaceAll(word, " ", "")
+
+	return normalized
 }
 
 func main() {
