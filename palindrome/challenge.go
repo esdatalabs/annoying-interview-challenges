@@ -5,23 +5,18 @@ import (
 	"strings"
 )
 
-func validate(w1 string, w2 string) bool {
+func validate(phrase string) bool {
 
 	regex := regexp.MustCompile(`^[a-zA-Z]+$`)
 	var lettersOnly = regex.MatchString
 
-	//If the words are the same, they're not anagrams
-	if w1 == w2 {
-		return false
-	}
-
-	//words must be of same length
-	if len(w1) != len(w2) {
+	//Words cannot be empty
+	if len(phrase) == 0 {
 		return false
 	}
 
 	//words must be composed of letters only
-	if !lettersOnly(w1) || !lettersOnly(w2) {
+	if !lettersOnly(phrase) {
 		return false
 	}
 
