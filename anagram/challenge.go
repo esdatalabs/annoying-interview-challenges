@@ -7,12 +7,19 @@ func solultion1(w1 string, w2 string) bool {
 	howLong := len(w1)
 	thisLong := len(w2)
 
-	//The
 	if howLong != thisLong {
 		return false
 	}
 
 	return false
+}
+
+func validate(w1 string, w2 string) {
+
+}
+
+func normalize(word string) string {
+	return ""
 }
 
 func main() {
