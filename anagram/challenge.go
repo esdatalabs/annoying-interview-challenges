@@ -25,6 +25,8 @@ func normalize(word string) string {
 
 	normalized := strings.ReplaceAll(word, " ", "")
 
+	normalized = strings.ToLower(normalized)
+
 	return normalized
 }
 

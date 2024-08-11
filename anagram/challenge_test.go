@@ -10,7 +10,7 @@ var suite = []data{
 	//Normalizing should prune spaces
 	{"this has spaces", "thishasspaces"},
 	//Normalzing should convert word to lower case
-	{"ThisISMIXEDSPACE", "thishasspaces"},
+	{"ThisISMIXEDSPACE", "thisismixedspace"},
 }
 
 func Test_normalize(t *testing.T) {
