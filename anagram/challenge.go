@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func solultion1(w1 string, w2 string) bool {
 
 	howLong := len(w1)
@@ -19,9 +21,11 @@ func main() {
 	w2 := "fried"
 
 	if solultion1(w1, w2) {
-		println("%s and %s are anagrams of each other", w2, w2)
+		fmt.Printf("%s and %s are anagrams of each other", w1, w2)
 	} else {
-		println("%s and %s are not anagrams of each other", w2, w2)
+		fmt.Printf("%s and %s are not anagrams of each other", w1, w2)
 	}
+
+	println("end")
 
 }
